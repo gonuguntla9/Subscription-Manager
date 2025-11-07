@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subscription Manager — Track, Optimize, Save</title>
+  <meta name="description" content="Smartly manage all your subscriptions in one place. Track usage, find alternatives, and optimize costs automatically." />
+  <meta property="og:title" content="Subscription Manager — Track, Optimize, Save" />
+  <meta property="og:description" content="Smartly manage all your subscriptions in one place. Track usage, find alternatives, and optimize costs automatically." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img class="logo" src="assets/logo.svg" alt="Subscription Manager logo" width="36" height="36" />
+        <b>Subscription Manager</b>
+      </a>
+      <nav class="actions">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a class="btn primary" href="#signup">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Track • Optimize • Save</span>
+          <h1>All your subscriptions in one place — with smart savings built in.</h1>
+          <p class="sub">See every recurring payment on a single dashboard, get usage insights, discover better-value alternatives, and cut waste automatically.</p>
+          <div class="cta">
+            <a class="btn primary" href="#signup">Start free</a>
+            <a class="btn ghost" href="#demo">View demo</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="stat">
+            <div class="stat-emoji">📉</div>
+            <div>
+              <strong>Average savings: 18%</strong>
+              <div class="muted">within the first 30 days*</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-emoji">📊</div>
+            <div>
+              <strong>Usage insights</strong>
+              <div class="muted">right-size plans based on real activity</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Features</h2>
+        <p class="sub">Everything you need to manage, analyze, and optimize subscriptions—without spreadsheet chaos.</p>
+        <div class="grid features">
+          <article class="card f1">
+            <h3>Unified hub</h3>
+            <p>Connect accounts or add manually. See renewals, owners, costs, and terms side-by-side.</p>
+          </article>
+          <article class="card f2">
+            <h3>Optimization & alternatives</h3>
+            <p>AI flags redundant tools and suggests better-value options tailored to usage patterns.</p>
+          </article>
+          <article class="card f3">
+            <h3>Usage statistics</h3>
+            <p>Track logins, seats, and engagement to right-size plans with confidence.</p>
+          </article>
+          <article class="card f4">
+            <h3>Renewal guard</h3>
+            <p>Smart alerts for trials, renewals, and price hikes—never miss a deadline.</p>
+          </article>
+          <article class="card f5">
+            <h3>Team & approvals</h3>
+            <p>Assign owners, collect approvals, and keep finance in the loop with audit-ready logs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p class="sub">Choose a plan that fits your needs. Simple, transparent pricing with no hidden fees.</p>
+        <div class="grid pricing">
+          <div class="card price-card">
+            <h3>Free</h3>
+            <p>Get started with up to 5 tracked subscriptions and essential insights.</p>
+            <h4>$0 / month</h4>
+            <a class="btn primary" href="#signup">Start Free</a>
+          </div>
+          <div class="card price-card">
+            <h3>Pro</h3>
+            <p>For individuals or startups who want automated optimization and alerts.</p>
+            <h4>$9 / month</h4>
+            <a class="btn primary" href="#signup">Get Pro</a>
+          </div>
+          <div class="card price-card">
+            <h3>Business</h3>
+            <p>Manage team subscriptions with analytics, approvals, and savings reports.</p>
+            <h4>$29 / month</h4>
+            <a class="btn primary" href="#signup">Go Business</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="grid steps">
+          <div class="card step">
+            <h3>1) Connect or import</h3>
+            <p>Link accounts or upload a CSV. We’ll map vendors, plans, and billing cycles.</p>
+          </div>
+          <div class="card step">
+            <h3>2) Analyze & discover</h3>
+            <p>See usage, overlap, and spend by team. Get smart suggestions and alternatives.</p>
+          </div>
+          <div class="card step">
+            <h3>3) Optimize & save</h3>
+            <p>Downsize, cancel, or switch—track savings and guard renewals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup" class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>Ready to cut subscription waste?</h3>
+            <p class="sub">Start free and see savings projections in minutes.</p>
+          </div>
+          <a class="btn primary" href="#">Create your account</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="y"></span> Subscription Manager</div>
+      <nav class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
