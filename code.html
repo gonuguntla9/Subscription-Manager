@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Subscription Management Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4A90E2",
+            "background-light": "#F8F9FA",
+            "background-dark": "#102216",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7XgCgaxJrxk5saUpNALsQ2e4iug78HSKyjPi64_IlRXWBDAK-fqWnt6hB85bAZ64vCF7Lme-0719eSTCdG4T9EnpHnlqs6jDdJMX7vUbPq7rF0YVKkXbObCh8lsy2ytSwHu_1Mwxd4n5jSReMOqlshyBWR5loWsA7V_3l9W-E8PY81370GCpdLXzC8kAcVcB4xbWty4PvqGhkFVNWSecWtT8mG9UKjCaw7ex92kJWwObtNczTCLh5PNpghn-hxiDD0UAyBVczOiw_");'></div>
+<div class="flex flex-col">
+<h1 class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal">John Doe</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">john.doe@email.com</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined text-primary">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Add Subscription</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-6">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-gray-800 dark:text-gray-100 text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, John!</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Here's a summary of your subscriptions.</p>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal">Total Monthly Cost</p>
+<p class="text-gray-900 dark:text-gray-50 tracking-light text-2xl font-bold leading-tight">$124.50</p>
+<p class="text-green-500 text-base font-medium leading-normal">+2.5%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal">Upcoming Payments</p>
+<p class="text-gray-900 dark:text-gray-50 tracking-light text-2xl font-bold leading-tight">$48.99</p>
+<p class="text-orange-500 text-base font-medium leading-normal">in 7 days</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal">Potential Savings</p>
+<p class="text-gray-900 dark:text-gray-50 tracking-light text-2xl font-bold leading-tight">$15.99</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-medium leading-normal">from low usage</p>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-gray-800 dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Active Subscriptions</h2>
+<!-- Search and Filters (Chips) -->
+<div class="flex flex-col md:flex-row gap-3 mb-4">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary" placeholder="Search subscriptions..." type="text"/>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 dark:bg-gray-700 px-4">
+<p class="text-gray-700 dark:text-gray-200 text-sm font-medium leading-normal">Sort by Name</p>
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-base">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 dark:bg-gray-700 px-4">
+<p class="text-gray-700 dark:text-gray-200 text-sm font-medium leading-normal">Category: All</p>
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-base">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<!-- Subscription List -->
+<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-gray-50 dark:bg-gray-700">
+<tr>
+<th class="p-4 text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">Name</th>
+<th class="p-4 text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">Cost</th>
+<th class="p-4 text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">Renewal Date</th>
+<th class="p-4 text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase text-center">Usage</th>
+<th class="p-4 text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+<!-- Subscription Row 1 -->
+<tr class="group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-md" data-alt="Netflix logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaYmchTahuLrt8BnhMAMFTjxQBtegJsCLwS2dgXkUd4q-moauPAEfLuvHXfe0ZcDajY_dzLmc-FmgVsmyZFaAlhzNG2mBkZNnB5qEqZn1-fxWCIvReoyKzabIqDDrxElbLQgZUmbRjdgDhbezAsJSmBMZwkPdODwA2-xLkn1r6M6OaQciqL0iVI9uTDqd0FPmHZ-qeKgI4cZEL3EdjiXJI7JwZ9MtYHCEfezJDxSpKc72oIZO0hNY6w7MN-NIKwiaZonswJgYsODlB"/>
+<span class="font-medium text-gray-800 dark:text-gray-100">Netflix</span>
+</div>
+</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">$15.49/mo</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">July 25, 2024</td>
+<td class="p-4">
+<div class="flex items-center justify-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+<span class="text-sm text-gray-600 dark:text-gray-400">High</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-500"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Subscription Row 2 -->
+<tr class="group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-md" data-alt="Spotify logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfbTvyKGVINJkwGZ1Hf8vmuq9oKDz5YYT3J_eopTH-4MhQWcLHYBXpK0Nor5N2tWhfPuv63_XSgudW5h32jfnIkCpd6g9gthTVeyCQGJedf4SYcqW4zNiiW5o4Zcbzb6FkdX03487XoTztmzVgp1nBWMBavhHDgZPTwiau-JLRQMEjEndCLR5eFlCu-i493hWYGJf1TB2ymjigmYT27x-AJKOVmB6kEprcOAe08v-KZN1ospwMCNUboZISowPGdGeMyoBQ9hAXEg1R"/>
+<span class="font-medium text-gray-800 dark:text-gray-100">Spotify</span>
+</div>
+</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">$10.99/mo</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">July 28, 2024</td>
+<td class="p-4">
+<div class="flex items-center justify-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+<span class="text-sm text-gray-600 dark:text-gray-400">High</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-500"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Subscription Row 3 -->
+<tr class="group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-md" data-alt="Adobe Creative Cloud logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXuOdtVPfNzDCysmKXg6Wc18OEzTtuUn287laeO08hptTAnCrIdxyYHgbuL8Abd4-DEcpTWLG2p4H_rEHs1P8IxxG-Wj2-xP2uAXIiCQkg3617CwDdJXnoWYV3cX-fxxAcHMggQZM0J4_K92s_800brbNznrUii1kYnF-R8_YAPiJyFHwbcIZFxkZepYe4lT0aDsU-RNDO7LzdjDXqCMR2tCPfsieO2R5CD9JqLDxZePnylj_saFzvbdIf8NfXxUFaWStfqScafGGf"/>
+<span class="font-medium text-gray-800 dark:text-gray-100">Adobe Creative Cloud</span>
+</div>
+</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">$54.99/mo</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">August 05, 2024</td>
+<td class="p-4">
+<div class="flex items-center justify-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-orange-400"></div>
+<span class="text-sm text-gray-600 dark:text-gray-400">Medium</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-500"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Subscription Row 4 -->
+<tr class="group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-md" data-alt="Gym membership logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiKeOoNMRi-jrO4DeDNXlCHJyvcMRm8qctzX3s5WrM1lzpTk7Bv5fmAL-gU8II_dLdkbowxyO-4snJ00-6cnkl5zxeYjX-WZBMvTF24ONUnnR-r1aLMSNR_xygseHOFszM4AJ59GpgQgOn5n4CX_R5tb13t0R1OBFPoKP0XyhUTn4xrU8jq5u9z2Uvxd1QsxFteNOwbck9PSF03Ign4sTZlFU7r6t-i4l3jWJthpXMic5PcMUmKcVo08lEc74iig1kHE38axWOOEKb"/>
+<span class="font-medium text-gray-800 dark:text-gray-100">Gym Membership</span>
+</div>
+</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">$30.00/mo</td>
+<td class="p-4 text-gray-700 dark:text-gray-300">August 10, 2024</td>
+<td class="p-4">
+<div class="flex items-center justify-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+<span class="text-sm text-gray-600 dark:text-gray-400">Low</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-500"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Empty State (Uncomment to view) -->
+<!--
+          <div class="text-center p-16">
+            <span class="material-symbols-outlined text-6xl text-gray-300 dark:text-gray-600 mb-4">receipt_long</span>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">No subscriptions yet</h3>
+            <p class="text-gray-500 dark:text-gray-400 mt-2 mb-4">Add your first subscription to start tracking!</p>
+            <button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+              <span class="truncate">Add a Subscription</span>
+            </button>
+          </div>
+          -->
+</div>
+</div>
+</main>
+</div>
+</body></html>
